@@ -1,0 +1,19 @@
+
+# main_cuboid.py
+import three_d_figures as tdf  # your module
+
+# Take input from user
+length = float(input("Enter length of the cuboid: "))
+width = float(input("Enter width of the cuboid: "))
+height = float(input("Enter height of the cuboid: "))
+
+# Calculate values using module functions
+volume = tdf.cuboid_volume(length, width, height)
+total_surface_area = tdf.cuboid_surface_area(length, width, height)
+curved_surface_area = 2 * (length + width) * height  # CSA = 2*(l + w)*h
+
+# Display results
+print("\nCuboid Calculations:")
+print("Curved Surface Area (CSA):", round(curved_surface_area, 2))
+print("Total Surface Area (TSA):", round(total_surface_area, 2))
+print("Volume:", round(volume, 2))
