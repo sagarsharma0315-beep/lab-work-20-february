@@ -1,0 +1,17 @@
+# main.py
+import three_d_figures as tdf  # import your module
+
+# Take input from user
+radius = float(input("Enter radius of the cylinder: "))
+height = float(input("Enter height of the cylinder: "))
+
+# Calculate values using functions from module
+volume = tdf.cylinder_volume(radius, height)
+total_surface_area = tdf.cylinder_surface_area(radius, height)
+curved_surface_area = 2 * 3.141592653589793 * radius * height  # CSA formula: 2 * π * r * h
+
+# Display results
+print("\nCylinder Calculations:")
+print("Curved Surface Area (CSA):", round(curved_surface_area, 2))
+print("Total Surface Area (TSA):", round(total_surface_area, 2))
+print("Volume:", round(volume, 2))
