@@ -1,0 +1,21 @@
+# main_cone.py
+import math
+import three_d_figures as tdf  # your module
+
+# Take input from user
+radius = float(input("Enter radius of the cone: "))
+height = float(input("Enter height of the cone: "))
+
+# Calculate slant height
+slant_height = math.sqrt(radius ** 2 + height ** 2)
+
+# Use module functions
+volume = tdf.cone_volume(radius, height)
+total_surface_area = tdf.cone_surface_area(radius, height)
+curved_surface_area = math.pi * radius * slant_height  # CSA = π * r * l
+
+# Display results
+print("\nCone Calculations:")
+print("Curved Surface Area (CSA):", round(curved_surface_area, 2))
+print("Total Surface Area (TSA):", round(total_surface_area, 2))
+print("Volume:", round(volume, 2))
